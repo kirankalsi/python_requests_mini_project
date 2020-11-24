@@ -7,8 +7,11 @@ from application import app
 
 @app.route('/', methods=['GET'])
 def index():
-    animal = requests.get("http://34.105.145.24:5001/animal")
-    sound = requests.post("http://34.105.145.24:5001/sound", data=animal.text)
-    return render_template('index.html', animal=animal.text, sound=sound.text)
+    try:
+        animal = requests.get("http://34.89.59.226:5001/animal")
+        sound = requests.post("http://34.89.59.226:5001/sound", data=animal.text)
+        return render_template('index.html', animal=animal.text, sound=sound.text)
+    except requests.exceptions.RequestException:
+        return render_template('error.html')
     #sound = requests.post("http://localhost:5000/sound", data=animal.json)
     #return render_template('index.html', animal=animal.json, sound=sound.json)
