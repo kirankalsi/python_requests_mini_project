@@ -1,3 +1,8 @@
-/__pycache__/
+/service1/.pytest_cache
 /service1/application/__pycache__/
+/service1/tests/__pycache__/
+/service2/.pytest_cache
 /service2/application/__pycache__/
+/service2/tests/__pycache__/
+/service1/.coverage
+/service2/.coverage
