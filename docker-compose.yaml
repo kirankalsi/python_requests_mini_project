@@ -1,7 +1,7 @@
 version: "3.7"
 services:
  service1:
-   image: service1:latest
+   image: kirankalsi/service1:latest
    #build: ./service1
    deploy:
       replicas: 2
@@ -10,7 +10,7 @@ services:
      published: 5000
      protocol: tcp
  service2:
-   image: service2:latest
+   image: kirankalsi/service2:latest
    #build: ./service2
    deploy:
       replicas: 2
