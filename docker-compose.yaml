@@ -2,7 +2,7 @@ version: "3.7"
 services:
   service1:
     image: kirankalsi/service1:latest
-    #build: ./service1
+    build: ./service1
     deploy:
       replicas: 2
     ports:
@@ -11,7 +11,7 @@ services:
       protocol: tcp
   service2:
     image: kirankalsi/service2:latest
-    #build: ./service2
+    build: ./service2
     deploy:
       replicas: 2
     ports:
