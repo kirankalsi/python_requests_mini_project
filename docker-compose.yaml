@@ -16,5 +16,4 @@ services:
       replicas: 2
     ports:
     - target: 5001
-      published: 5001
       protocol: tcp
