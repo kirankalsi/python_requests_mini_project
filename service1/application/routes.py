@@ -8,8 +8,8 @@ from application import app
 @app.route('/', methods=['GET'])
 def index():
     try:
-        animal = requests.get("http://34.105.145.24:5001/animal")
-        sound = requests.post("http://34.105.145.24:5001/sound", data=animal.text)
+        animal = requests.get("http://service2:5001/animal")
+        sound = requests.post("http://service2:5001/sound", data=animal.text)
         return render_template('index.html', animal=animal.text, sound=sound.text)
     except requests.exceptions.RequestException:
         return render_template('error.html')
