@@ -1,15 +1,24 @@
 pipeline{
         agent any
         stages{
+            stage('Test'){
+                steps{
+                    sh "./scripts/test.sh"
+                }
+            }
             stage('Build Images'){
                 steps{
-                    sh "docker build -t python_requests_mini_project/service1 ."
-                    sh "docker build -t python_requests_mini_project/service2 ."
+                    sh "./scripts/build.sh"
+                }
+            }
+            stage('Push'){
+                steps{
+                    sh "./scripts/push.sh"
                 }
             }
             stage('Deploy'){
                 steps{
-                    sh "docker stack deploy --compose-file docker-compose.yaml my-stack"
+                    sh "./scripts/deploy.sh"
                 }
             }
         }
