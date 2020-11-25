@@ -1,20 +1,20 @@
 version: "3.7"
 services:
- service1:
-   image: kirankalsi/service1:latest
-   #build: ./service1
-   deploy:
+  service1:
+    image: kirankalsi/service1:latest
+    #build: ./service1
+    deploy:
       replicas: 2
-   ports:
-   - target: 5000
-     published: 5000
-     protocol: tcp
- service2:
-   image: kirankalsi/service2:latest
-   #build: ./service2
-   deploy:
+    ports:
+    - target: 5000
+      published: 5000
+      protocol: tcp
+  service2:
+    image: kirankalsi/service2:latest
+    #build: ./service2
+    deploy:
       replicas: 2
-   ports:
-   - target: 5001
-     published: 5001
-     protocol: tcp
+    ports:
+    - target: 5001
+      published: 5001
+      protocol: tcp
