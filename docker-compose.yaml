@@ -1,15 +1,15 @@
 version: "3.7"
 services:
  service1:
+   image: service1:latest
    build: ./service1
-   image: service1
    ports:
    - target: 5000
      published: 5000
      protocol: tcp
  service2:
+   image: service2:latest
    build: ./service2
-   image: service2
    ports:
    - target: 5001
      published: 5001
